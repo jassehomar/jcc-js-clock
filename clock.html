@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="bulma.min.css" />
+    <title>JCC Clock</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .hide {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .show {
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        main {
+            flex: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- UNP@123j -->
+        <main class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <div class="level columns">
+                            <div class="level-left">
+                                <h1 class="title text-center is-1 level-item">JCC Clock</h1>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <a class="button is-link">Show Digital Clock</a>
+                                    &nbsp;
+                                    <div class="select hide">
+                                        <select>
+                                            <option value="24">24 Hour Clock</option>
+                                            <option value="12">12 Hour Clock</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box text-center">
+                            <h2 class="text-center title is-2">Hey! Good <span class="greeting">Evening</span>, Omar</h2>
+                            <div class="digital-clock">
+                                <div class="welcome">
+                                    <p>You want to know the current time ?</p>
+                                    <a class="button is-link is-small is-outlined yes-show-time">Yes Please :)</a>&nbsp;
+                                    <a class="button is-danger is-inverted is-small no-show-time">No Thanks</a>
+                                </div>
+                                <article class="message is-success hide" >
+                                        <div class="message-body text-center title is-2 current-time hide" style="border-style: none">
+                                          
+                                        </div>
+                                </article>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <footer class="footer hero is-link is-bold">
+        <div class="content has-text-centered">
+            <p>
+                <strong>JCC Digital Clock</strong> by <a href="#">Omar Jasseh</a>. Made with love with <a href="https://bulma.io" style="color:aqua" target="_blank" >Bulma.</a> <br>The source code is free for all JCC JS-Sprint Course Students.
+            </p>
+        </div>
+    </footer>
+    <script src="app.min.js"></script>
+</body>
+
+</html>
